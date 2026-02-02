@@ -1,10 +1,10 @@
 import { Github, Linkedin, Mail, Code2, Globe, Cpu } from "lucide-react";
-import ProjectCard from "@/components/ProjectCard"; // Make sure the path is correct
+import ProjectCard from "@/components/ProjectCard";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-primary/30 selection:text-primary">
-      <main className="max-w-5xl mx-auto px-6 pt-32 pb-24">
+      <main className="max-w-6xl mx-auto px-6 pt-32 pb-24">
         
         {/* --- HERO SECTION --- */}
         <section className="flex flex-col items-start gap-6 mb-32 animate-in fade-in slide-in-from-bottom-4 duration-1000">
@@ -17,7 +17,7 @@ export default function Home() {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-balance">
-            Building digital products that <span className="text-muted text-zinc-400">scale.</span>
+            Building digital products that <span className="text-zinc-400">scale.</span>
           </h1>
           
           <p className="max-w-2xl text-lg md:text-xl text-muted leading-relaxed">
@@ -30,7 +30,7 @@ export default function Home() {
             </a>
             <div className="flex items-center gap-2">
               <SocialLink href="https://github.com/swaraj608" icon={<Github size={20} />} />
-              <SocialLink href="https://linkedin.com/in/your-profile" icon={<Linkedin size={20} />} />
+              <SocialLink href="https://linkedin.com" icon={<Linkedin size={20} />} />
               <SocialLink href="mailto:your@email.com" icon={<Mail size={20} />} />
             </div>
           </div>
@@ -38,7 +38,7 @@ export default function Home() {
 
         {/* --- SKILLS SECTION --- */}
         <section className="mb-32">
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-muted mb-8">Technical Arsenal</h2>
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-muted mb-8 text-zinc-500">Technical Arsenal</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <SkillCard icon={<Code2 />} title="Frontend" desc="React, Next.js, Tailwind, Framer Motion" />
             <SkillCard icon={<Cpu />} title="Backend" desc="Node.js, PostgreSQL, Prisma, Supabase" />
@@ -47,20 +47,26 @@ export default function Home() {
         </section>
 
         {/* --- PROJECTS SECTION --- */}
-        <section id="projects" className="py-20 border-t border-border">
-          <h3 className="text-3xl font-bold mb-12 tracking-tight">Featured Projects</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <section id="projects" className="py-20 border-t border-zinc-100 dark:border-zinc-800">
+          <h3 className="text-3xl font-bold mb-12 tracking-tight text-zinc-500">Featured Projects</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ProjectCard 
               title="Pro-Trade"
-              desc="Crypto trading interface with WebSocket integration for real-time data updates."
+              desc="A real-time crypto trading interface featuring live WebSocket data integration and a dual-layer architecture."
               tags={["TypeScript", "WebSockets", "Next.js"]}
               github="https://github.com/swaraj608/Pro-Trade"
             />
             <ProjectCard 
               title="Price-Tracker"
-              desc="Automated tool for monitoring e-commerce price changes via web scraping."
+              desc="Automated tool designed to monitor price fluctuations across e-commerce platforms with data scraping."
               tags={["Next.js", "Scraping", "Node.js"]}
               github="https://github.com/swaraj608/Price-Tracker"
+            />
+            <ProjectCard 
+              title="iChat"
+              desc="Real-time chat application featuring notification sounds, responsive design, and WebSocket communication."
+              tags={["JavaScript", "Socket.io", "CSS3"]}
+              github="https://github.com/swaraj608/iChat"
             />
           </div>
         </section>
@@ -82,7 +88,7 @@ function SocialLink({ href, icon }: { href: string; icon: React.ReactNode }) {
 
 function SkillCard({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) {
   return (
-    <div className="p-6 rounded-2xl border border-border bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm transition-all hover:border-primary/30 hover:shadow-sm">
+    <div className="p-6 rounded-2xl border border-border bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm transition-all hover:border-primary/30">
       <div className="text-primary mb-4">{icon}</div>
       <h4 className="font-bold mb-1">{title}</h4>
       <p className="text-sm text-muted leading-relaxed">{desc}</p>
