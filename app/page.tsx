@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { Github, Linkedin, Mail, ArrowUpRight, Code2, Globe, Cpu } from "lucide-react";
+import { Github, Linkedin, Mail, Code2, Globe, Cpu } from "lucide-react";
+import ProjectCard from "@/components/ProjectCard"; // Make sure the path is correct
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-balance">
-            Building digital products that <span className="text-muted">scale.</span>
+            Building digital products that <span className="text-muted text-zinc-400">scale.</span>
           </h1>
           
           <p className="max-w-2xl text-lg md:text-xl text-muted leading-relaxed">
@@ -29,8 +29,8 @@ export default function Home() {
               View My Work
             </a>
             <div className="flex items-center gap-2">
-              <SocialLink href="https://github.com" icon={<Github size={20} />} />
-              <SocialLink href="https://linkedin.com" icon={<Linkedin size={20} />} />
+              <SocialLink href="https://github.com/swaraj608" icon={<Github size={20} />} />
+              <SocialLink href="https://linkedin.com/in/your-profile" icon={<Linkedin size={20} />} />
               <SocialLink href="mailto:your@email.com" icon={<Mail size={20} />} />
             </div>
           </div>
@@ -47,27 +47,20 @@ export default function Home() {
         </section>
 
         {/* --- PROJECTS SECTION --- */}
-        <section id="projects">
-          <div className="flex justify-between items-end mb-12">
-            <div>
-              <h2 className="text-sm font-semibold uppercase tracking-widest text-muted mb-2">Portfolio</h2>
-              <h3 className="text-3xl font-bold">Selected Projects</h3>
-            </div>
-            <a href="#" className="text-primary font-medium flex items-center gap-1 hover:underline">
-              View all <ArrowUpRight size={16} />
-            </a>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section id="projects" className="py-20 border-t border-border">
+          <h3 className="text-3xl font-bold mb-12 tracking-tight">Featured Projects</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <ProjectCard 
-              title="Modern SaaS Platform"
-              desc="A full-stack dashboard with real-time analytics and Stripe integration."
-              tags={["Next.js 15", "TypeScript", "Prisma"]}
+              title="Pro-Trade"
+              desc="Crypto trading interface with WebSocket integration for real-time data updates."
+              tags={["TypeScript", "WebSockets", "Next.js"]}
+              github="https://github.com/swaraj608/Pro-Trade"
             />
             <ProjectCard 
-              title="AI Content Engine"
-              desc="Generating high-quality marketing copy using OpenAI's latest models."
-              tags={["OpenAI", "Server Actions", "Tailwind"]}
+              title="Price-Tracker"
+              desc="Automated tool for monitoring e-commerce price changes via web scraping."
+              tags={["Next.js", "Scraping", "Node.js"]}
+              github="https://github.com/swaraj608/Price-Tracker"
             />
           </div>
         </section>
@@ -77,11 +70,11 @@ export default function Home() {
   );
 }
 
-/* --- REUSABLE COMPONENTS --- */
+/* --- REUSABLE HELPERS --- */
 
 function SocialLink({ href, icon }: { href: string; icon: React.ReactNode }) {
   return (
-    <a href={href} className="h-12 w-12 flex items-center justify-center rounded-full border border-border transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-900 text-muted hover:text-foreground">
+    <a href={href} target="_blank" className="h-12 w-12 flex items-center justify-center rounded-full border border-border transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-900 text-muted hover:text-foreground">
       {icon}
     </a>
   );
@@ -89,34 +82,10 @@ function SocialLink({ href, icon }: { href: string; icon: React.ReactNode }) {
 
 function SkillCard({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) {
   return (
-    <div className="p-6 rounded-2xl border border-border bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm">
+    <div className="p-6 rounded-2xl border border-border bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm transition-all hover:border-primary/30 hover:shadow-sm">
       <div className="text-primary mb-4">{icon}</div>
       <h4 className="font-bold mb-1">{title}</h4>
       <p className="text-sm text-muted leading-relaxed">{desc}</p>
-    </div>
-  );
-}
-
-function ProjectCard({ title, desc, tags }: { title: string; desc: string; tags: string[] }) {
-  return (
-    <div className="group cursor-pointer">
-      <div className="aspect-video relative rounded-2xl mb-4 overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-border group-hover:border-primary/50 transition-all">
-        {/* Placeholder for Project Image */}
-        <div className="absolute inset-0 flex items-center justify-center text-zinc-400 opacity-20 group-hover:scale-110 transition-transform">
-           <Globe size={80} />
-        </div>
-      </div>
-      <h4 className="text-xl font-bold flex items-center gap-2 group-hover:text-primary transition-colors">
-        {title} <ArrowUpRight size={18} className="opacity-0 group-hover:opacity-100 transition-all" />
-      </h4>
-      <p className="text-muted text-sm mb-4 leading-relaxed">{desc}</p>
-      <div className="flex gap-2">
-        {tags.map((tag) => (
-          <span key={tag} className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400">
-            {tag}
-          </span>
-        ))}
-      </div>
     </div>
   );
 }
