@@ -1,59 +1,57 @@
 "use client";
-import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { Terminal, ShieldCheck, Cpu, ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative pt-32 pb-16 md:pt-48 md:pb-32 px-6">
-      <div className="max-w-5xl mx-auto">
+    <section className="relative min-h-screen flex items-center justify-center pt-20 px-6">
+      <div className="max-w-5xl mx-auto text-center">
+        
         {/* Availability Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-medium mb-6 animate-fade-in">
+        <motion.div 
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="inline-flex items-center gap-2 px-3 py-1 rounded-md border border-primary/30 bg-primary/5 text-primary text-[10px] font-mono uppercase tracking-[0.3em] mb-12"
+        >
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
           </span>
-          Available for new opportunities
-        </div>
+          System Status: Operational
+        </motion.div>
 
-        {/* Main Content */}
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-balance">
-          I build <span className="text-primary">scalable</span> web applications with precision.
+        {/* Title */}
+        <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-none">
+          SECURE. <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-emerald-500 to-amber-500 text-glow-emerald">
+            SCALABLE.
+          </span>
         </h1>
         
-        <p className="text-muted text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
-          Hi, I&apos;m <span className="text-foreground font-medium">Your Name</span>. 
-          A Full-stack Developer specialized in crafting high-performance interfaces 
-          using Next.js 15 and the modern web ecosystem.
+        <p className="text-zinc-500 dark:text-emerald-500/60 text-lg md:text-xl max-w-2xl mx-auto font-mono mb-12 uppercase tracking-tight">
+          &gt; Swaraj // Full-Stack Architect <br />
+          &gt; Specializing in low-latency trading logic and automated defensive systems.
         </p>
 
-        {/* Actions */}
-        <div className="flex flex-wrap gap-4 items-center">
-          <a 
-            href="#projects" 
-            className="group bg-foreground text-background px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:opacity-90 transition-all"
-          >
-            View Projects
-            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-          </a>
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <button className="px-8 py-4 bg-primary text-background font-bold rounded-sm hover:skew-x-[-10deg] transition-all flex items-center gap-2">
+            INITIALIZE EXPLORATION <ArrowRight size={18} />
+          </button>
           
-          <div className="flex gap-3 ml-2">
-            <SocialLink href="https://github.com" icon={<Github size={20} />} />
-            <SocialLink href="https://linkedin.com" icon={<Linkedin size={20} />} />
-            <SocialLink href="mailto:hello@example.com" icon={<Mail size={20} />} />
+          {/* Subtle Stats */}
+          <div className="flex gap-8 border-l border-primary/20 pl-8">
+            <div className="text-left">
+              <p className="text-[10px] text-zinc-500 uppercase">Uptime</p>
+              <p className="font-mono text-primary">99.9%</p>
+            </div>
+            <div className="text-left">
+              <p className="text-[10px] text-zinc-500 uppercase">Latency</p>
+              <p className="font-mono text-secondary">24ms</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function SocialLink({ href, icon }: { href: string; icon: React.ReactNode }) {
-  return (
-    <a 
-      href={href} 
-      target="_blank" 
-      className="p-3 rounded-full border border-border hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors text-muted hover:text-foreground"
-    >
-      {icon}
-    </a>
   );
 }
