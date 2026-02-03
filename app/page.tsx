@@ -4,10 +4,11 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectCard from "@/components/ProjectCard";
+import Footer from "@/components/Footer";
 
 /**
  * CORE SYSTEM ORCHESTRATOR
- * This is the main assembly point for the SWARAJ_LOGIC interface.
+ * Assembly point for the SWARAJ_LOGIC interface.
  */
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
       <Navbar />
 
       {/* --- LAYER 2: MAIN INTERFACE --- */}
-      <main className="relative z-10 max-w-7xl mx-auto px-6 pb-24">
+      <main className="relative z-10 max-w-7xl mx-auto px-6">
         
         {/* MODULE 01: IDENTITY & ARCHITECTURE */}
         <Hero />
@@ -85,32 +86,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* --- LAYER 3: SYSTEM FOOTER --- */}
-        <footer className="mt-40 py-12 border-t border-primary/5">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="text-[10px] text-zinc-700 font-mono tracking-widest uppercase">
-              © 2026 SWARAJ_LOGIC // All_Systems_Operational
-            </div>
-            <div className="flex gap-8">
-              <FooterLink label="Terminal" />
-              <FooterLink label="Network" />
-              <FooterLink label="Security" />
-            </div>
-          </div>
-        </footer>
+        {/* MODULE 04: CONNECTION TERMINAL (FOOTER) */}
+        <Footer />
 
       </main>
     </div>
-  );
-}
-
-/**
- * LOCAL HELPER: FOOTER LINKS
- */
-function FooterLink({ label }: { label: string }) {
-  return (
-    <span className="text-[9px] text-zinc-800 font-bold uppercase tracking-[0.3em] hover:text-primary/40 cursor-wait transition-colors">
-      {label}
-    </span>
   );
 }
