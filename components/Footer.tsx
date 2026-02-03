@@ -35,7 +35,7 @@ export default function Footer() {
           {/* Right Side: Command Execution */}
           <div className="flex flex-col justify-center md:items-end">
             <a 
-              href="mailto:your@email.com" 
+              href="mailto:swarajmedha@gmail.com" 
               style={{ clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%)" }}
               className="group relative flex items-center gap-6 bg-primary px-10 py-6 transition-all hover:bg-emerald-400 active:scale-95"
             >

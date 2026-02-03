@@ -49,8 +49,8 @@ export default function Hero() {
             {/* Integrated Social Links */}
             <div className="flex gap-4">
               <SocialIcon href="https://github.com/swaraj608" icon={<Github size={18} />} />
-              <SocialIcon href="https://linkedin.com" icon={<Linkedin size={18} />} />
-              <SocialIcon href="mailto:your@email.com" icon={<Mail size={18} />} />
+              <SocialIcon href="https://www.linkedin.com/in/medha-swaraj-8a89492b3/" icon={<Linkedin size={18} />} />
+              <SocialIcon href="mailto:swarajmedha@gmail.com" icon={<Mail size={18} />} />
             </div>
           </div>
 
