@@ -40,11 +40,11 @@ export default function Hero() {
         >
           {/* Left Column: Identity Descriptor */}
           <div className="space-y-6 border-l-2 border-primary/20 pl-6">
-            <p className="text-zinc-500 font-mono text-sm leading-relaxed uppercase tracking-tight">
-              // ROLE: LEAD_SYSTEMS_DEVELOPER <br />
-              // FOCUS: HIGH_FREQUENCY_LOGIC // SECURE_ARCH <br />
-              // DEPLOYING: NEXT.JS_15 // WEBSOCKET_FLUX
-            </p>
+           <p className="text-zinc-500 font-mono text-sm leading-relaxed uppercase tracking-tight">
+  <span className="text-primary/60">//</span> ROLE: FULL_STACK_ENGINEER <br />
+  <span className="text-primary/60">//</span> FOCUS: COMPUTATIONAL_EFFICIENCY // SCALABLE_ARCH <br />
+  <span className="text-primary/60">//</span> DEPLOYING: MODERN_WEB_STACK // REACT_NODE_FLUX
+</p>
             
             {/* Integrated Social Links */}
             <div className="flex gap-4">
