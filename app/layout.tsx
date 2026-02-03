@@ -29,8 +29,8 @@ export default function RootLayout({
           {/* --- NAVIGATION --- */}
           <nav className="fixed top-0 w-full z-50 border-b border-zinc-200/50 dark:border-zinc-800/50 bg-white/70 dark:bg-zinc-950/70 backdrop-blur-xl">
             <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-              <a href="/" className="font-bold text-xl tracking-tighter hover:opacity-70 transition-opacity flex items-center gap-2">
-                SWARAJ<span className="text-blue-500 text-2xl leading-none">.</span>
+              <a href="/" className="font-bold text-xl tracking-tighter hover:opacity-70 transition-opacity flex items-center">
+               SWARAJ<span className="text-blue-500 text-2xl leading-none ml-px">.</span>
               </a>
               
               <div className="flex gap-4 md:gap-8 text-sm font-medium items-center">
