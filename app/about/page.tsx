@@ -90,8 +90,8 @@ export default function AboutPage() {
                 As a Computer Science student at Katihar Engineering College, I’ve moved beyond academic theory to build production-ready digital infrastructure. My work focuses on removing friction between complex data and the end-user.
               </p>
               <p>
-                Whether it is building <span className="text-primary">WebSocket-driven trading dashboards</span> or <span className="text-primary">autonomous price monitors</span>, I approach every project with a "System Architect" mindset—optimizing for speed, security, and clean logic.
-              </p>
+  I bridge the gap between <span className="text-primary">complex requirements</span> and <span className="text-primary">high-performance solutions</span> by maintaining a "System Architect" discipline—optimizing for speed, hardening security, and ensuring <span className="text-primary">architectural clarity</span> in every line of code.
+</p>
             </div>
           </motion.section>
 
@@ -106,8 +106,8 @@ export default function AboutPage() {
               [02] ACADEMIC_TRACK
             </div>
             <div className="md:col-span-2 space-y-8">
-              <AcademicRow year="2023 - 2027" title="B.Tech Computer Science" institution="Katihar Engineering College" status="IN_PROGRESS" />
-              <AcademicRow year="2021 - 2023" title="Higher Secondary" institution="Science Stream" status="COMPLETED" />
+              <AcademicRow year="2023 - 2027" title="B.Tech Computer Science" institution="Katihar Engineering College, Katihar" status="IN_PROGRESS" />
+              <AcademicRow year="2021 - 2023" title="Higher Secondary" institution="HS B. M. P. -7, Katihar" status="COMPLETED" />
             </div>
           </motion.section>
         </div>
