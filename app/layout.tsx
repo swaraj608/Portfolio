@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "SWARAJ | CORE_LOGIC",
-  description: "High-stakes digital infrastructure. Next.js 15 // WebSockets // Low-Latency UI.",
+  description: "Full-Stack Engineer // Computational Efficiency // Scalable Systems Architecture.",
   icons: {
     icon: "/favicon.ico", 
   },
