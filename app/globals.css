@@ -1,52 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #020617;
+  --background: #020617; /* Deepest Midnight */
+  --foreground: #ecfdf5;
   --primary: #10b981;    /* Emerald */
-  --secondary: #f59e0b;  /* Amber */
-  --accent: #064e3b;    /* Dark Emerald */
-  --border: rgba(16, 185, 129, 0.1);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #020617; /* Deep Navy Black */
-    --foreground: #ecfdf5; /* Off-white Emerald tint */
-    --primary: #10b981;
-    --secondary: #fbbf24;
-    --border: rgba(16, 185, 129, 0.15);
-  }
+  --border: rgba(16, 185, 129, 0.15);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
   --color-border: var(--border);
 }
 
 @layer base {
   body {
-    @apply bg-background text-foreground antialiased selection:bg-primary/30 selection:text-primary;
+    @apply bg-[#020617] text-foreground antialiased selection:bg-primary/30 selection:text-primary;
     
-    /* Cyber Mesh Background */
+    /* Cyber-Grid Background */
     background-image: 
-      linear-gradient(rgba(16, 185, 129, 0.02) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(16, 185, 129, 0.02) 1px, transparent 1px),
-      radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
-    background-size: 40px 40px, 40px 40px, 100% 100%;
+      linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
     background-attachment: fixed;
   }
-}
 
-@layer utilities {
-  .cyber-grid {
-    @apply relative overflow-hidden border border-primary/20 bg-emerald-500/5 backdrop-blur-sm;
-  }
-  
-  .text-glow-emerald {
-    text-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+  /* Add a pulse to the background */
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
   }
 }
