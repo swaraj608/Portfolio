@@ -14,7 +14,7 @@ const SKILL_MODULES = [
     id: "02",
     title: "Backend_Auth",
     icon: <Cpu size={24} />,
-    skills: ["Node.js", "Express.js", "PostgreSQL", "Firebase"],
+    skills: ["Node.js", "Express.js", "MongoDB (NoSQL)", "Firebase"],
     status: "STABLE",
   },
   {

@@ -83,6 +83,20 @@ export default function Home() {
               tags={["Socket.io", "React", "CSS_Grid"]}
               github="https://github.com/swaraj608/iChat"
             />
+
+            <ProjectCard 
+             title="Stegano-Logic-Toolkit"
+             desc="A Python-based cryptographic tool utilizing LSB (Least Significant Bit) encoding and XOR encryption to embed obfuscated data within lossless image carriers."
+             tags={["Python", "Cryptography", "Image_Processing"]}
+             github="https://github.com/swaraj608/STEGANOGRAPHY"
+            />
+
+          <ProjectCard 
+            title="E-Commerce Platform"
+            desc="A full-stack MERN architecture featuring a decoupled frontend and backend, persistent state management, and RESTful API endpoints for comprehensive product lifecycle handling."
+            tags={["MongoDB", "Express", "React", "Node"]}
+            github="https://github.com/swaraj608/final-ecommerce"
+          />
           </div>
         </section>
 
