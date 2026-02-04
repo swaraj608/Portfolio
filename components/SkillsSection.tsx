@@ -5,31 +5,31 @@ import { Code2, Cpu, Globe, Database, Layers, Zap } from "lucide-react";
 const SKILL_MODULES = [
   {
     id: "01",
-    title: "Frontend_Logic",
+    title: "Full_Stack_Dev",
     icon: <Code2 size={24} />,
-    skills: ["Next.js 15", "React.js", "TypeScript", "Tailwind CSS"],
-    status: "OPTIMIZED",
+    skills: ["React.js", "Next.js 15", "Node.js", "MongoDB"],
+    status: "MERN_ARCH",
   },
   {
     id: "02",
-    title: "Backend_Auth",
+    title: "Systems_&_Scripting", 
     icon: <Cpu size={24} />,
-    skills: ["Node.js", "Express.js", "MongoDB (NoSQL)", "Firebase"],
-    status: "STABLE",
+    skills: ["Python (Advanced Scripting)", "C++ (OOPs)", "C", "Algorithms"],
+    status: "CORE_LOGIC",
   },
   {
     id: "03",
-    title: "Data_Flow",
+    title: "Data_Security",
     icon: <Globe size={24} />,
-    skills: ["REST APIs", "WebSockets", "JSON Data", "HTTP/HTTPS"],
-    status: "ACTIVE",
+    skills: ["LSB Steganography", "XOR Encryption", "Data Obfuscation", "Image Processing"],
+    status: "ENCRYPTED",
   },
   {
     id: "04",
     title: "Dev_Environment",
     icon: <Layers size={24} />,
     skills: ["Git / GitHub", "Vercel Deployment", "NPM / Bun", "Postman"],
-    status: "ENCRYPTED",
+    status: "STABLE",
   },
 ];
 
