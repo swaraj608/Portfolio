@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Shield, Menu, X, Terminal, Cpu } from "lucide-react";
 import { useState } from "react";
-import Link from "next/link"; // Import Link for Next.js routing
+import Link from "next/link"; 
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,9 +29,7 @@ export default function Navbar() {
 
         {/* DESKTOP MENU */}
         <div className="hidden md:flex gap-10 items-center">
-          {/* Navigating to /about page */}
           <NavLink href="/about" label="ROOT_DIR" index="01" />
-          {/* Anchors for the main page */}
           <NavLink href="/#projects" label="VAULT_FILES" index="02" />
           <NavLink href="/#skills" label="LOGIC_CORE" index="03" />
           

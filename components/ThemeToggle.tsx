@@ -9,7 +9,7 @@ export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
-  if (!mounted) return <div className="w-9 h-9" />; // Avoid layout shift
+  if (!mounted) return <div className="w-9 h-9" />; 
 
   return (
     <button

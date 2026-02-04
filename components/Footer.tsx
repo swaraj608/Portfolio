@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 pb-20">
           
-          {/* Left Side: System Hook */}
+          {/* Left Side Hook */}
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-2 py-1 bg-primary/5 border border-primary/20">
               <Zap size={12} className="text-primary animate-pulse" />
@@ -32,7 +32,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Right Side: Command Execution */}
+          {/* Right Side command Execution */}
           <div className="flex flex-col justify-center md:items-end">
             <a 
               href="mailto:swarajmedha@gmail.com" 

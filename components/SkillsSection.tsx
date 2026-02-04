@@ -36,6 +36,8 @@ const SKILL_MODULES = [
 export default function SkillsSection() {
   return (
     <section id="skills" className="mb-40 pt-20">
+
+
       {/* SECTION HEADER */}
       <div className="flex items-center gap-4 mb-12">
         <div className="h-px w-12 bg-primary" />
@@ -44,6 +46,8 @@ export default function SkillsSection() {
         </h2>
         <div className="h-px flex-grow bg-primary/10" />
       </div>
+
+
 
       {/* SKILLS GRID */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -57,10 +61,13 @@ export default function SkillsSection() {
             className="group relative p-6 border border-primary/10 bg-primary/[0.02] hover:bg-primary/[0.05] transition-all duration-500 overflow-hidden"
             style={{ clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%)" }}
           >
+
+
             {/* BACKGROUND DECOR */}
             <div className="absolute top-0 right-0 p-2 opacity-10 text-primary group-hover:opacity-30 transition-opacity">
               <Zap size={40} />
             </div>
+
 
             {/* HEADER */}
             <div className="flex justify-between items-start mb-6">
@@ -72,10 +79,12 @@ export default function SkillsSection() {
               </span>
             </div>
 
+
             {/* CONTENT */}
             <h3 className="text-xs font-black uppercase tracking-widest text-emerald-50 mb-4">
               {module.title}
             </h3>
+
 
             <ul className="space-y-2 mb-6">
               {module.skills.map((skill) => (
@@ -85,6 +94,7 @@ export default function SkillsSection() {
                 </li>
               ))}
             </ul>
+
 
             {/* FOOTER STATUS */}
             <div className="flex justify-between items-center border-t border-primary/10 pt-4 mt-auto">
