@@ -36,7 +36,7 @@ export default function Navbar() {
           <NavLink href="/#skills" label="LOGIC_CORE" index="03" />
           
           <a 
-            href="mailto:your@email.com" 
+            href="mailto:swarajmedha@gmail.com" 
             className="relative group px-5 py-2 overflow-hidden border border-primary/40"
           >
             <div className="absolute inset-0 bg-primary translate-y-[101%] group-hover:translate-y-0 transition-transform duration-300" />

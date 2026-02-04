@@ -14,7 +14,7 @@ const SKILL_MODULES = [
     id: "02",
     title: "Systems_&_Scripting", 
     icon: <Cpu size={24} />,
-    skills: ["Python (Advanced Scripting)", "C++ (OOPs)", "C", "Algorithms"],
+    skills: ["Python (Intermediate)", "C++ (OOPs)", "C", "Algorithms"],
     status: "CORE_LOGIC",
   },
   {
