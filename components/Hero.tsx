@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { ArrowRight, Activity, ShieldCheck, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Activity, ShieldCheck, Github, Linkedin, Mail, FileText } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -40,11 +40,11 @@ export default function Hero() {
         >
           {/* Left Column: Identity Descriptor */}
           <div className="space-y-6 border-l-2 border-primary/20 pl-6">
-           <p className="text-zinc-500 font-mono text-sm leading-relaxed uppercase tracking-tight">
-  <span className="text-primary/60">//</span> ROLE: FULL_STACK_ENGINEER <br />
-  <span className="text-primary/60">//</span> FOCUS: COMPUTATIONAL_EFFICIENCY // SCALABLE_ARCH <br />
-  <span className="text-primary/60">//</span> DEPLOYING: MODERN_WEB_STACK // REACT_NODE_FLUX
-</p>
+            <p className="text-zinc-500 font-mono text-sm leading-relaxed uppercase tracking-tight">
+              <span className="text-primary/60">//</span> ROLE: FULL_STACK_ENGINEER <br />
+              <span className="text-primary/60">//</span> FOCUS: COMPUTATIONAL_EFFICIENCY // SCALABLE_ARCH <br />
+              <span className="text-primary/60">//</span> DEPLOYING: MODERN_WEB_STACK // REACT_NODE_FLUX
+            </p>
             
             {/* Integrated Social Links */}
             <div className="flex gap-4">
@@ -56,13 +56,26 @@ export default function Hero() {
 
           {/* Right Column: Primary Action & Meta */}
           <div className="flex flex-col gap-4">
-            <a 
-              href="#projects"
-              style={{ clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%)" }}
-              className="bg-primary text-black px-8 py-5 font-black text-xs tracking-widest uppercase hover:bg-emerald-400 transition-all flex items-center justify-center gap-3 group active:scale-[0.98]"
-            >
-              INITIALIZE_VAULT_ACCESS <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-            </a>
+            <div className="flex flex-col sm:flex-row gap-3">
+              {/* Vault Access Button */}
+              <a 
+                href="#projects"
+                style={{ clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%)" }}
+                className="flex-1 bg-primary text-black px-6 py-5 font-black text-xs tracking-widest uppercase hover:bg-emerald-400 transition-all flex items-center justify-center gap-2 group active:scale-[0.98]"
+              >
+                INITIALIZE_VAULT <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </a>
+
+              {/* Resume Download Button */}
+              <a 
+                href="/MEDHA_SWARAJ_RESUME.pdf"
+                download="MEDHA_SWARAJ_RESUME.pdf"
+                style={{ clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%)" }}
+                className="border border-primary/40 bg-primary/10 text-primary px-6 py-5 font-black text-xs tracking-widest uppercase hover:bg-primary/20 transition-all flex items-center justify-center gap-2 group active:scale-[0.98]"
+              >
+                <FileText size={16} className="group-hover:scale-110 transition-transform" /> RESUME_DATA
+              </a>
+            </div>
             
             <div className="flex justify-between font-mono text-[9px] text-zinc-600 px-2 uppercase tracking-widest">
               <span className="flex items-center gap-1"><ShieldCheck size={10} className="text-primary/50" /> Verified_Dev</span>
